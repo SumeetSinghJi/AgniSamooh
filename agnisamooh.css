@@ -1,0 +1,44 @@
+
+body {font-family: 'Arial'; background-color: f1f1f1; margin: 0;}
+h1 {font-size: 55px;}
+h1 {font-size: 45px;}
+p {font-size: 18px;}
+a {text-decoration: none;}
+
+.paragrah_inline_link {display: inline;}
+.centre_text {text-align: center;}
+
+/* to create flex media breakpoints - https://www.w3schools.com/css/css3_flexbox_responsive.asp */
+
+.header {
+    background-color:#333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;}
+    .header h1{color: white;}
+    .header h2{color: white;}
+    .header ul {list-style-type: none;}
+    .header li {float: left;}
+    .header li a {color: white;font-size: 22px;padding: 14px 16px;text-decoration: none;}
+    .header li a:hover {background-color: #111;}
+
+.row {display: flex;}
+    .column1 {background-color: #bbb;flex: 1;max-width: 100%;height: auto;padding:10px}
+    .column2 {background-color: white;flex: 3;max-width: 100%;height: auto;padding:10px}
+    .column3 {background-color: #ccc;flex: 1;max-width: 100%;height: auto;padding:10px}
+
+.footer {background-color:#333;display: flex;}
+    .footercolumn1 {flex: 1;color: white;padding:10px}
+    .footercolumn2 {flex: 1;color: white;padding:10px}
+    .footercolumn3 {flex: 1;color: white;padding:10px}
+    .footercolumn4 {flex: 1;color: white;padding:10px}
+    .footer h3 {color: white;}
+    .footer ul {list-style-type: none;}
+    .footer a {text-decoration: none;color: white;}
+
+    /* For Google Maps */
+#googleMap {
+        height: 400px;
+        width: 100%;
+    }
