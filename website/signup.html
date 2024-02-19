@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>checkout</title>
+    <title>login and registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex"> <!-- Will prevent searching by Search Engines -->
-    <link rel = "stylesheet" href="agnisamooh.css">
-    <link rel = "icon" type="image/x-icon" href="images/lion.ico">
-    <script src="agnisamooh.js"></script>
+    <link rel="stylesheet" href="css/agnisamooh.css">
+    <link rel="icon" type="image/x-icon" href="images/lion.ico">
+    <script src="scripts/agnisamooh.js"></script>
     <script src="https://kit.fontawesome.com/6edd7b8717.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -30,11 +29,45 @@
     <div class ="row">
     <div class = "column1"></div>
     <div class = "column2">
-    <h2>Checkout</h2>
-    <p> Email: kurta.kursi@gmail.com for any questions</p>
+    <h2>Login and Registration</h2>
+    <h3>Register new account</h3>
+    <form id="signup">
+        <label for="first_name">First name:</label><br>
+        <input type="text" id="first_name" name="first_name" maxlength="20"><br>
+        <label for="last_name>">Last name:</label><br>
+        <input tpe="text" id="last_name" name="last_name" maxlength="20"><br>
+        <label for="email>">Email:</label><br>
+        <input tpe="text" id="email" name="email" maxlength="20"><br>
+        <label for="mobile>">Mobile:</label><br>
+        <input type="tel" id="mobile" name="mobile" max="15"><br>
+        <label for="password>">Password:</label><br>
+        <input type="password" id="register-user-login-password" name="register-user-login-password" max="30"><br>
+        <label for="password>">Confirm Password (Type password in again):</label><br>
+        <input type="password" id="confirm-user-login-password" name="confirm-user-login-password" max="30"><br>
+        <input type="checkbox" onclick="showPassword()">Show Password
+        <br>
+        <input type="submit" value="signup">
+        <input type="reset" value="reset">
+    </form>
+    <br>
+    <br>
+    <h3>Login</h3>
+    <form id="login">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password>">Password:</label><br>
+        <input type="password" id="user-login-password" name="user-login-password"><br>
+        <input type="checkbox" onclick="showPassword()">Show Password
+        <br>
+        <input type="submit" value="login">
+        <input type="reset" value="reset">
+    </form>
+
 
     </div>
-    <div class = "column3"></div>
+    <div class = "column3">
+        
+    </div>
     </div>
 
     <div class="footer">

@@ -1,0 +1,41 @@
+
+To Do
+
+* Validate password JS - https://www.w3schools.com/howto/howto_js_password_validation.asp 
+* Homepage slider - https://www.w3schools.com/howto/howto_js_slideshow.asp 
+* Create a Risks document and .gitignore it. 
+* Captcha on account sign up, and verify email 
+* Add date created to user account - https://www.w3schools.com/mysql/mysql_dates.asp 
+* Add date password changed - https://www.w3schools.com/mysql/mysql_dates.asp 
+* Create a new record with JS form 
+* Then test modifying record with JS form 
+* Then test deleting record with JS form 
+* shopping cart 
+* Logging in shows extra header link to account (drop down; which shows options account, tickets, orders, order history) 
+* Contact us page – test sending email through @gmail routing 
+* /*to create flex media breakpoints - https://www.w3schools.com/css/css3_flexbox_responsive.asp */ in Magian website 
+* JavaScript - https://www.w3schools.com/js/js_json_intro.asp 
+* XML - https://www.w3schools.com/xml/ 
+* JSON - https://www.w3schools.com/js/js_json_intro.asp 
+* React - https://www.w3schools.com/rect/default.asp 
+* In react create a common header.html page and same with footer. 
+* In fact rebuild whole website using React 
+* NodeJS - https://www.w3schools.com/nodejs/default.asp 
+* Language drop down filter with rule 
+* Currency exchange filter with rule 
+* Email subscribe sign out link page 
+* Allow users to submit their own games 
+* Change downloads page to Games. 
+* Create a submission page that's has a filter for [text: enter name], genre, year, developer, controller support, language on * the side, drop down box for license type or Custom Other (Which requires a * approval), and finally upload the game copy. 
+* Allow users to submit their own titles, only after they have finished registering an account 
+* Titles appear on submissions page, max 1 per day rule, unless they provide proof of revenue greater then $x thousand, and * * * store this somewhere safe. 
+* Rule to only have 2 uploaded games a day global for all companies to prevent SPAM/Hackers 
+* Black list of emails allowed for submission, Black list of developers both in a RDS database. 
+* Add option for in game browser play Scissors Paper Rock game 
+* Cookie popup - https://www.w3schools.com/howto/howto_js_popup.asp 
+* JS cookie - https://www.w3schools.com/js/js_cookies.asp 
+* Chatbot 
+* Build own search 
+* Forum section 
+* Chat section 
+* Setup MFA 
