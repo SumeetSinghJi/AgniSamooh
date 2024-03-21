@@ -1,6 +1,8 @@
 
 To Do
 
+* Node.js doesn't load css and js, see the console log
+
 * Validate password JS - https://www.w3schools.com/howto/howto_js_password_validation.asp 
 * Homepage slider - https://www.w3schools.com/howto/howto_js_slideshow.asp 
 * Create a Risks document and .gitignore it. 
