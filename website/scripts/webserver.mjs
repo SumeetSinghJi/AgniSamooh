@@ -1,24 +1,75 @@
-import http from 'http';
+import https from 'https';
 import fs from 'fs';
 import path from 'path';
 import url from 'url';
 
-/* 
-folder structure is as follows
+/*
+    Author: Sumeet Singh
+    Dated: 23/03/2024
+    Minimum EC6
+    Purpose: Dev Webserver for testing AgniSamooh.com site offline
+    License: MIT License
+    Description: The script reads SSL certificate and key files, sets up an HTTPS server, and serves static files from a specified directory.
+*/
 
-note relative to this file, the website files are one level up hence websitePath = '..'
 
-C:\Users\Sumeet\Documents\AgniSamooh\website\index.html
-C:\Users\Sumeet\Documents\AgniSamooh\website\css\agnisamooh.css
-C:\Users\Sumeet\Documents\AgniSamooh\website\scripts\agnisamooh.js
-C:\Users\Sumeet\Documents\AgniSamooh\website\scripts\webserver.mjs
+/* TO DO
+
+Implement Secure Headers:
+Set secure HTTP response headers to enhance security. For example, you can use the helmet package in Node.js to set 
+headers like X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, and others to protect against common web 
+vulnerabilities.
+
+Implement Content Security Policy (CSP):
+Use Content Security Policy (CSP) headers to mitigate the risks of XSS (Cross-Site Scripting) attacks by specifying 
+which resources are allowed to be loaded on your website.
+
+Input Validation and Sanitization:
+Ensure that user input is properly validated and sanitized to prevent injection attacks such as SQL injection, 
+XSS, and command injection.
+
+File Path Validation:
+Validate user-supplied file paths to prevent directory traversal attacks. In your code, ensure that the requested 
+file path is within the expected directory structure (websitePath) and does not allow access to sensitive system 
+files.
+
+Error Handling:
+Implement comprehensive error handling to handle unexpected situations gracefully and prevent information 
+leakage. Avoid exposing stack traces or sensitive information in error responses.
+
+Access Control:
+Enforce access control mechanisms to restrict access to sensitive resources and APIs based on user authentication 
+and authorization.
+
+Update Dependencies Regularly:
+Keep your dependencies up-to-date to ensure that you're using the latest versions with security patches and fixes.
+
+Security Audits and Penetration Testing:
+Conduct regular security audits and penetration testing to identify and address potential security 
+vulnerabilities proactively.
+
 */
 
 const cwd = process.cwd(); // CWD: C:\Users\Sumeet\Documents\AgniSamooh\website\scripts
+// note relative to this file, the website files are one level up hence websitePath = '..'
 const websitePath = path.resolve(cwd, '..'); // Absolute: C:\Users\Sumeet\Documents\AgniSamooh\website
 console.log("websitePath is: " + websitePath);
 
-http.createServer(function (req, res) {
+// Read CA cert and key for SSL
+// use ../ to go up one level so ../../ go up 2 levels then go down /keys/key.pem
+const options = {
+    key: fs.readFileSync('../../keys/key.pem'),
+    cert: fs.readFileSync('../../keys/cert.pem'),
+};
+
+// http.createServer(function (req, res) {
+https.createServer(options, function(req, res) {
+
+    // verify if SSL cert/ley pair loaded
+    if (!options.key || !options.cert) {
+        console.error('Error loading SSL certificate or key.');
+        return;
+    }
 
     var parsedURL = url.parse(req.url); // http://localhost:8080\index.html
     var filename = parsedURL.pathname; // index.html
